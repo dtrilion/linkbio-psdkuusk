@@ -29,38 +29,42 @@ body::before {
 
 .container {
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
     text-align: center;
     position: relative;
     z-index: 1;
 }
 
-/* Hanya 1 logo - digunakan sebagai profile utama */
-.main-logo {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 20px auto;
-    display: block;
-    border-radius: 50%;
-    border: 4px solid white;
+/* Wrapper untuk logo dengan background putih */
+.logo-wrapper {
     background: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    object-fit: cover;
+    padding: 30px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo ukuran besar - hampir memenuhi background putih */
+.main-logo {
+    width: 85%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
 .main-logo:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 header {
     margin-bottom: 35px;
     animation: fadeInUp 0.8s ease-out;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 header h1 {
@@ -69,6 +73,7 @@ header h1 {
     font-weight: 800;
     margin-bottom: 8px;
     letter-spacing: -0.5px;
+    margin-top: 10px;
 }
 
 header p {
@@ -196,9 +201,17 @@ footer {
         padding: 15px;
     }
     
+    .container {
+        max-width: 100%;
+    }
+    
+    .logo-wrapper {
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
     .main-logo {
-        width: 100px;
-        height: 100px;
+        width: 90%;
     }
     
     header h1 {
@@ -222,15 +235,35 @@ footer {
     }
 }
 
-/* Untuk layar yang lebih besar */
-@media (min-width: 768px) {
+/* Untuk tablet */
+@media (min-width: 481px) and (max-width: 768px) {
     .container {
-        max-width: 500px;
+        max-width: 450px;
+    }
+    
+    .logo-wrapper {
+        padding: 25px;
     }
     
     .main-logo {
-        width: 140px;
-        height: 140px;
+        width: 80%;
+    }
+}
+
+/* Untuk desktop */
+@media (min-width: 769px) {
+    .container {
+        max-width: 550px;
+    }
+    
+    .logo-wrapper {
+        padding: 40px;
+        border-radius: 40px;
+    }
+    
+    .main-logo {
+        width: 80%;
+        max-width: 400px;
     }
     
     header h1 {
