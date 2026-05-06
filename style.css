@@ -2,14 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    /* Background menggunakan warna akademik yang solid dan bersih */
-    background: #f8fafc;
-    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
-    background-size: 20px 20px; /* Pola titik halus untuk kesan kertas/arsitektur */
+    /* Tema Kuning Cerah */
+    background-color: #FFD700;
     color: #1e293b;
     display: flex;
     justify-content: center;
@@ -19,116 +17,104 @@ body {
 
 .container {
     width: 100%;
-    max-width: 450px;
+    max-width: 420px;
     text-align: center;
+}
+
+/* Logo kecil paling atas ala link bio profesional */
+.top-logo {
+    width: 45px;
+    height: auto;
+    margin: 0 auto 20px auto;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+header {
+    margin-bottom: 30px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: white;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+header h1 {
+    font-size: 1.3rem;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 0.85rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Pengaturan Link */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.link-card {
+    background: white;
+    color: #000;
+    text-decoration: none;
+    padding: 16px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Membuat teks link tepat di tengah */
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Ikon diletakkan secara absolute di kiri agar tidak menggeser teks tengah */
+.link-card i {
+    font-size: 1.2rem;
+    position: absolute;
+    left: 20px; 
+    color: #000;
+}
+
+.link-card span {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Efek Hover */
+.link-card:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.link-card:hover i {
+    color: #FFD700; /* Ikon berubah kuning saat di-hover */
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 0.75rem;
+    color: #333;
+    font-weight: 500;
 }
 
 /* Animasi Masuk */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-header {
-    animation: fadeInUp 0.8s ease-out;
-    margin-bottom: 30px;
-}
-
-.profile-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 20%; /* Kotak melingkar (Squircle) khas aplikasi edukasi */
-    border: 4px solid #ffffff;
-    padding: 0;
-    background: #ffffff;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-}
-
-header h1 {
-    font-size: 1.4rem;
-    color: #0f172a; /* Biru sangat gelap */
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-header p {
-    font-size: 0.9rem;
-    color: #64748b;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-/* Tag Instansi/Jurusan */
-.badge {
-    display: inline-block;
-    background: #e2e8f0;
-    color: #475569;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-/* Tombol Link */
-.links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.link-card {
-    background: #ffffff;
-    color: #1e293b;
-    text-decoration: none;
-    padding: 16px 20px;
-    border-radius: 12px; /* Sudut lebih formal */
-    border: 1px solid #e2e8f0;
-    display: flex;
-    align-items: center;
-    position: relative;
-    transition: all 0.2s ease;
-    opacity: 0;
-    animation: fadeInUp 0.5s ease-out forwards;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-}
-
-/* Staggered animation */
-.link-card:nth-child(1) { animation-delay: 0.1s; }
-.link-child(2) { animation-delay: 0.2s; }
-.link-card:nth-child(3) { animation-delay: 0.3s; }
-.link-card:nth-child(4) { animation-delay: 0.4s; }
-
-.link-card i {
-    font-size: 1.2rem;
-    color: #2563eb; /* Biru Aksentuasi Kampus */
-    width: 35px;
-    text-align: center;
-}
-
-.link-card span {
-    flex-grow: 1;
-    text-align: left; /* Teks rata kiri terlihat lebih terstruktur untuk akademik */
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-left: 10px;
-}
-
-/* Hover Effect */
-.link-card:hover {
-    background: #f1f5f9;
-    border-color: #2563eb;
-    transform: translateX(5px); /* Geser ke samping memberikan kesan list yang aktif */
-    box-shadow: 4px 4px 0px #2563eb; /* Aksen shadow tegas */
-}
-
-footer {
-    margin-top: 50px;
-    font-size: 0.8rem;
-    color: #94a3b8;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 20px;
 }
