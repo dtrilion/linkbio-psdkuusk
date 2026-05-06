@@ -36,16 +36,7 @@ body::before {
 }
 
 /* Wrapper untuk logo dengan background putih */
-.logo-wrapper {
-    background: white;
-    padding: 30px;
-    border-radius: 30px;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 /* Logo ukuran besar - hampir memenuhi background putih */
 
