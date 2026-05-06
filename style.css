@@ -30,6 +30,13 @@ body {
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
+.link-card span {
+    font-weight: 600;
+    font-size: 0.95rem;
+    width: 100%; /* Tambahkan ini agar teks mengambil ruang penuh dan rata tengah sempurna */
+    text-align: center;
+}
+
 header {
     margin-bottom: 30px;
     animation: fadeInUp 0.8s ease-out;
