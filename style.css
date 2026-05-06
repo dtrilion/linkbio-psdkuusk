@@ -36,12 +36,30 @@ body::before {
 }
 
 /* Wrapper untuk logo dengan background putih */
-
+.logo-wrapper {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Logo ukuran besar - hampir memenuhi background putih */
+.main-logo {
+    width: 85%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
 
 .main-logo:hover {
-    transform: scale(0.02);
+    transform: scale(1.02);
 }
 
 header {
@@ -55,7 +73,7 @@ header h1 {
     font-weight: 800;
     margin-bottom: 8px;
     letter-spacing: -0.5px;
-    margin-top: 10px;
+    margin-top: 0;
 }
 
 header p {
@@ -188,8 +206,9 @@ footer {
     }
     
     .logo-wrapper {
-        padding: 20px;
-        border-radius: 20px;
+        padding: 15px;
+        border-radius: 15px;
+        margin-bottom: 10px;
     }
     
     .main-logo {
@@ -224,7 +243,8 @@ footer {
     }
     
     .logo-wrapper {
-        padding: 25px;
+        padding: 18px;
+        margin-bottom: 12px;
     }
     
     .main-logo {
@@ -239,8 +259,9 @@ footer {
     }
     
     .logo-wrapper {
-        padding: 40px;
-        border-radius: 40px;
+        padding: 25px;
+        border-radius: 25px;
+        margin-bottom: 15px;
     }
     
     .main-logo {
