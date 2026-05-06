@@ -35,22 +35,23 @@ body::before {
     z-index: 1;
 }
 
-/* Wrapper untuk logo dengan background putih */
+/* Wrapper untuk logo dengan background putih - dibikin BULAT */
 .logo-wrapper {
     background: white;
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 15px;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%; /* INI YANG MEMBUAT BULAT */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Memastikan logo tidak keluar dari batas bulat */
 }
 
-/* Logo ukuran besar - hampir memenuhi background putih */
+/* Logo ukuran besar - mengisi background putih bulat */
 .main-logo {
     width: 85%;
-    max-width: 350px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -59,7 +60,7 @@ body::before {
 }
 
 .main-logo:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
 header {
@@ -206,13 +207,13 @@ footer {
     }
     
     .logo-wrapper {
-        padding: 15px;
-        border-radius: 15px;
+        width: 150px;
+        height: 150px;
         margin-bottom: 10px;
     }
     
     .main-logo {
-        width: 90%;
+        width: 80%;
     }
     
     header h1 {
@@ -243,7 +244,8 @@ footer {
     }
     
     .logo-wrapper {
-        padding: 18px;
+        width: 180px;
+        height: 180px;
         margin-bottom: 12px;
     }
     
@@ -259,14 +261,14 @@ footer {
     }
     
     .logo-wrapper {
-        padding: 25px;
-        border-radius: 25px;
+        width: 220px;
+        height: 220px;
         margin-bottom: 15px;
     }
     
     .main-logo {
         width: 80%;
-        max-width: 400px;
+        max-width: 180px;
     }
     
     header h1 {
